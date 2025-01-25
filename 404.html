@@ -5,10 +5,19 @@
     <link rel="icon" type="image/svg+xml" href="/wind/assets/favicon-6ecd67c7.ico" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wind</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Wind WS</title>
     <script type="module" crossorigin src="/wind/assets/index-963afcd6.js"></script>
     <link rel="stylesheet" href="/wind/assets/index-ff62dc8a.css">
   </head>
+  <script>
+    window.onload = () => {
+      const ws = new WebSocket('ws://localhost:8080');
+      ws.onmessage = (e) => {
+        console.log(e.data);
+      };
+    };
+  </script>
   <body>
     <div id="root"></div>
     
