@@ -4,6 +4,7 @@ import FirstPage from 'pages/FirstPage/FirstPage';
 import SecondPage from 'pages/SecondPage/SecondPage';
 import HalfPage from 'pages/HalfPage/HalfPage';
 import ErrorPage from 'pages/ErrorPage/ErrorPage';
+import FileUploader from './pages/FileUploader/FileUploader';
 import { AppWrapper } from './App.styled';
 
 const test = import.meta.env.VITE_API_TEST;
@@ -18,6 +19,7 @@ function App() {
           <Route path="/second" element={<SecondPage />}>
             <Route path=":half" element={<HalfPage />} />
           </Route>
+          <Route path="/uploader" element={<FileUploader />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
